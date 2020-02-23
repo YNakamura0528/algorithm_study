@@ -1,7 +1,14 @@
-
+# import numpy as np
 
 def main():
+
     arr = [35, 3, 5, 1, 10, 7, -3, 4]
+    # arr = np.random.rand(200)
+    arr = simple_sort(arr)
+    
+    print(arr)
+
+def simple_sort(arr):
     checked_pos = 0
     length = len(arr)
 
@@ -19,7 +26,7 @@ def main():
         arr[i] = arr[min_pos]
         arr[min_pos] = tmp
     
-    print(arr)
+    return arr
 
 if __name__ == "__main__":
     main()
